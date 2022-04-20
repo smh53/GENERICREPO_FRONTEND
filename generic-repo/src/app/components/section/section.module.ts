@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddSectionComponent } from './add-section/add-section.component';
 import { ListSectionComponent } from './list-section/list-section.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 
 
@@ -11,7 +12,8 @@ import { ListSectionComponent } from './list-section/list-section.component';
     ListSectionComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AgGridModule
   ]
 })
 export class SectionModule { }

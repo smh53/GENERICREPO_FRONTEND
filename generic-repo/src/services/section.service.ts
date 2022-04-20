@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ListResponseModel } from 'src/models/listResponseModel';
+import { Section } from 'src/models/section';
 
 @Injectable({
   providedIn: 'root'
