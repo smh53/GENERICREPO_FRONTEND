@@ -4,14 +4,29 @@
       Section List 
     </nb-card-header>
     <nb-card-body >     
+    <div class="row" style="margin-bottom: 10px;">
+      <div class="col-md-2">
+        <button nbButton status="success" (click)="onAddRow()">YENİ SATIR EKLE</button>
+      </div>
+      <div class="col-md-2">
+        <button nbButton status="warning" (click)="onUpdateRow()">SEÇİLİ SATIRI GÜNCELLE</button>
+      </div>
+      <div class="col-md-2">
+        <button nbButton status="danger" (click)="onDeleteRow()">SEÇİLİ SATIRI SİL</button>
+      </div>
+      <i class="nb-plus"></i>
+      
+    </div>
+
         <div class="ag-theme-balham" style="width: 100%; height: 100%;">
             <ag-grid-angular
-            
+          
             style="width: 100%; height: 100%;"
             class="ag-theme-balham"
-            [rowData]="rowData"
-            [rowClassRules]="rowClassRules"
+            [rowData]="rowData"    
             (gridReady)="onGridReady($event)"
+            [localeText]="localeText"
+            [getRowId]="getRowId"
             [columnDefs]="columnDefs">
         </ag-grid-angular>
         </div>
