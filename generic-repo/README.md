@@ -28,8 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Screenshots
 
-![genericrepofrontend1](https://user-images.githubusercontent.com/39862947/164746225-fb13d1af-c852-4e1c-b0a7-0031eec2a15c.png)
+![11111111111](https://user-images.githubusercontent.com/39862947/164746985-a7b13edb-2e26-4d46-ad97-27c8ca070157.png)
 
-![genericrepofrontend2](https://user-images.githubusercontent.com/39862947/164746266-0acbc23d-7a7c-43f9-a093-3742b8b16dc4.png)
 
+![22222222222](https://user-images.githubusercontent.com/39862947/164746990-2f7d5f2e-4e1f-4abf-9f8a-84782194dbf3.png)
 
