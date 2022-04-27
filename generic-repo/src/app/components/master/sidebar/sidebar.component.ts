@@ -18,12 +18,7 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Section',
       icon: 'person',
-      children: [
-        {
-          title: 'Add Section',
-          icon: 'plus-outline',
-          link: 'add-section'
-        },
+      children: [    
         {
           title: 'Section List',
           icon: 'file-text-outline',

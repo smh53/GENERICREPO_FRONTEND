@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddSectionComponent } from './add-section.component';
+import { RendererActionsComponent } from './renderer-actions.component';
 
-describe('AddSectionComponent', () => {
-  let component: AddSectionComponent;
-  let fixture: ComponentFixture<AddSectionComponent>;
+describe('RendererActionsComponent', () => {
+  let component: RendererActionsComponent;
+  let fixture: ComponentFixture<RendererActionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddSectionComponent ]
+      declarations: [ RendererActionsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddSectionComponent);
+    fixture = TestBed.createComponent(RendererActionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
