@@ -3,6 +3,7 @@ import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { GridApi, ICellRendererParams, RowNode } from 'ag-grid-community';
 import { NotificationService } from 'src/services/notification.service';
 import { SectionService } from 'src/services/section.service';
+import { SignalrService } from 'src/services/signalr.service';
 
 @Component({
   selector: 'app-renderer-actions',
@@ -16,6 +17,8 @@ export class RendererActionsComponent implements ICellRendererAngularComp {
   
   constructor(private _sectionService: SectionService,
     private _notificationService: NotificationService,
+    private _signalRService: SignalrService
+    
     ) {
 
   }
@@ -27,7 +30,7 @@ export class RendererActionsComponent implements ICellRendererAngularComp {
       this.gridApi = params.api;
       this.cellValue = params.data.id;
       this.gridNode = params.node;
-    
+      
   }
  
   onDeleteRow() {
@@ -49,8 +52,12 @@ export class RendererActionsComponent implements ICellRendererAngularComp {
        
      response['success'] 
     ?  this._notificationService.notifySuccess(this._notificationService.successTitle,response['message'])
-    :  this._notificationService.error(response['message'], this._notificationService.errorTitle)
+    :  this._notificationService.error(response['message'], this._notificationService.errorTitle);
+
+   
+    
     }));
+    this._signalRService.addTransferDataListener();
 }
 
 

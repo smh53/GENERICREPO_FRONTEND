@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NbGlobalLogicalPosition, NbToastrService } from '@nebular/theme';
+import { Section } from 'src/models/section';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +8,9 @@ import { NbGlobalLogicalPosition, NbToastrService } from '@nebular/theme';
 export class NotificationService {
 
   constructor(private toastrService: NbToastrService,
-
+    
     ) { }
-  
+    
     public successTitle = 'İşlem Başarılı!';
     public errorTitle = 'Hata! İşlem Başarısız!';
     public warningAuthTitle = 'HATA! Yetkiniz Yok!';
@@ -17,6 +18,8 @@ export class NotificationService {
     public NoImageSelectedText = 'Güncellemek için resim seçmelisiniz!';
   
   
+
+   
   
   
     success( title?: string,message?: string) {

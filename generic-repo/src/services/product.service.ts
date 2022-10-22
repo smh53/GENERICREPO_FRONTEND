@@ -12,7 +12,7 @@ export class ProductService {
     const httpOptions = {
       headers: new HttpHeaders({
         // 'Content-Type': 'application/json',
-        // Authorization: 'Bearer ' + this._tokenStorage.get()['token'],
+        
       }),
     };
     return this._httpClient.get<Product>(`${environment.productUrl}GetAllProducts`, httpOptions);
@@ -22,7 +22,7 @@ export class ProductService {
     const httpOptions = {
       headers: new HttpHeaders({
         // 'Content-Type': 'application/json',
-        // Authorization: 'Bearer ' + this._tokenStorage.get()['token'],
+        
       }),
     };
     return this._httpClient.post<Product>(`${environment.productUrl}CreateProduct`, product, httpOptions);
@@ -32,7 +32,7 @@ export class ProductService {
     const httpOptions = {
       headers: new HttpHeaders({
         // 'Content-Type': 'application/json',
-        // Authorization: 'Bearer ' + this._tokenStorage.get()['token'],
+        
       }),
     };
     return this._httpClient.put<Product>(`${environment.productUrl}UpdateProduct`, product, httpOptions);
@@ -43,7 +43,7 @@ export class ProductService {
     const httpOptions = {
       headers: new HttpHeaders({
         // 'Content-Type': 'application/json',
-        // Authorization: 'Bearer ' + this._tokenStorage.get()['token'],
+        
       }),
     };
     return this._httpClient.delete(`${environment.productUrl}DeleteProduct/${productId}`, httpOptions);

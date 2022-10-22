@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NbMenuItem, NbSidebarService } from '@nebular/theme';
+import { AuthService } from 'src/services/auth.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,10 +9,12 @@ import { NbMenuItem, NbSidebarService } from '@nebular/theme';
 })
 export class SidebarComponent implements OnInit {
  
-  constructor() { }
+  constructor(
+    
+  ) { }
 
   ngOnInit(): void {
-    
+   
   }
  
   items: NbMenuItem[] = [
@@ -24,6 +27,19 @@ export class SidebarComponent implements OnInit {
           icon: 'file-text-outline',
           link: 'list-section'
         },
+      ],
+    },
+
+    {
+      title: 'Account',
+      icon: 'settings-outline',
+      children: [    
+        {
+          title: 'Add User',
+          icon: 'file-text-outline',
+          link: 'resgistration'
+        },
+
       ],
     },
   ];

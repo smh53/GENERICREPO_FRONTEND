@@ -5,6 +5,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NbActionsModule, NbIconModule, NbLayoutModule, NbMenuModule, NbSelectModule, NbSidebarModule, NbUserModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +25,10 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbActionsModule,
     NbSelectModule,
     NbUserModule,
-    NbIconModule
+    NbIconModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
 
    
   ],

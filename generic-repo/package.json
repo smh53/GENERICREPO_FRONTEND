@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@microsoft/signalr": "^6.0.5",
+    "@nebular/auth": "^9.0.3",
     "@nebular/eva-icons": "^9.0.2",
     "@nebular/theme": "^9.0.2",
     "@ngx-translate/core": "^14.0.0",
@@ -27,6 +29,7 @@
     "bootstrap": "^5.1.3",
     "eva-icons": "^1.1.3",
     "nebular-icons": "^1.1.0",
+    "ng-recaptcha": "^9.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

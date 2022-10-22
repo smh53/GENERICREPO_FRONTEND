@@ -1,0 +1,45 @@
+<h1 id="title" class="title">Login</h1>
+<p class="sub-title">GENERİC REPO GİRİŞ</p>
+
+
+
+
+<form (ngSubmit)="login(form)" #form="ngForm" aria-labelledby="title">
+
+ 
+  <div class="form-control-group">
+    <label class="label" for="input-userName">Username:</label>
+    <input nbInput
+           ngModel
+           #userName="ngModel"
+           id="input-userName"
+           name="userName"
+           placeholder="Username"
+           fullWidth
+          >
+    
+  </div>
+
+  <div class="form-control-group">
+    <label class="label" for="input-password">Password:</label>
+    <input nbInput
+           ngModel
+           #password="ngModel"
+           id="input-password"
+           name="password"
+           placeholder="Password"
+           fullWidth
+           >
+ 
+  </div>
+
+
+
+  <button nbButton fullWidth status="success" [disabled]="submitted || !form.valid" [class.btn-pulse]="submitted">
+    Log In
+  </button>
+</form>
+
+<!-- <section class="another-action" aria-label="Register">
+  Don't have an account? <a class="text-link" routerLink="../registration">Register</a>
+</section> -->

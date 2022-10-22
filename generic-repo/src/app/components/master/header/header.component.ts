@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NbAuthService, NbAuthToken } from '@nebular/auth';
 import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService } from '@nebular/theme';
 import { map, Subject, takeUntil } from 'rxjs';
+import { payloadHelper } from 'src/app/helpers/payloadHelper';
 
 
 @Component({
@@ -11,14 +13,28 @@ import { map, Subject, takeUntil } from 'rxjs';
 export class HeaderComponent implements OnInit {
   private destroy$: Subject<void> = new Subject<void>();
   userPictureOnly: boolean = false;
+  user: any;
   constructor(
     private sidebarService: NbSidebarService,
     private menuService: NbMenuService,
     private themeService: NbThemeService,
-    private breakpointService: NbMediaBreakpointsService
-  ) { }
+    private breakpointService: NbMediaBreakpointsService,
+    private authService: NbAuthService,
+  ) { 
+    this.authService.onTokenChange().subscribe((token: NbAuthToken) => {
+      if (token.isValid()) {
+        this.user = token.getPayload()[payloadHelper.fullname];
+        console.log(this.user)
+      }
+    
+    });
+
+  }
+  
+
 
   ngOnInit(): void {
+
     
     const { xl } = this.breakpointService.getBreakpointsMap();
     this.themeService.onMediaQueryChange()

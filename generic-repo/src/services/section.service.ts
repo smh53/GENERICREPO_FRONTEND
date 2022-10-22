@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { NbTokenStorage } from '@nebular/auth';
 import { environment } from 'src/environments/environment';
 import { ListResponseModel } from 'src/models/listResponseModel';
 import { Section } from 'src/models/section';
@@ -9,7 +10,10 @@ import { Section } from 'src/models/section';
 })
 export class SectionService {
 
-  constructor( private _httpClient: HttpClient,) { }
+  constructor(
+    private _httpClient: HttpClient,
+    private _tokenStorage: NbTokenStorage,
+    ) { }
 
 
 
@@ -17,17 +21,17 @@ export class SectionService {
     const httpOptions = {
       headers: new HttpHeaders({
         // 'Content-Type': 'application/json',
-        // Authorization: 'Bearer ' + this._tokenStorage.get()['token'],
+        
       }),
     };
-    return this._httpClient.get<ListResponseModel<Section>>(`${environment.sectionUrl}GetAllSections`, httpOptions)
+    return this._httpClient.get<ListResponseModel<Section>>(`${environment.sectionUrl}GetAllSections`, httpOptions) 
   }
 
   createSection(section: Section) {
     const httpOptions = {
       headers: new HttpHeaders({
         // 'Content-Type': 'application/json',
-        // Authorization: 'Bearer ' + this._tokenStorage.get()['token'],
+        
       }),
     };
     return this._httpClient.post<Section>(`${environment.sectionUrl}CreateSection`, section, httpOptions);
@@ -37,7 +41,7 @@ export class SectionService {
     const httpOptions = {
       headers: new HttpHeaders({
         // 'Content-Type': 'application/json',
-        // Authorization: 'Bearer ' + this._tokenStorage.get()['token'],
+        
       }),
     };
     return this._httpClient.put<Section>(`${environment.sectionUrl}UpdateSection`, section, httpOptions);
@@ -48,7 +52,7 @@ export class SectionService {
     const httpOptions = {
       headers: new HttpHeaders({
         // 'Content-Type': 'application/json',
-        // Authorization: 'Bearer ' + this._tokenStorage.get()['token'],
+        
       }),
     };
     return this._httpClient.delete(`${environment.sectionUrl}DeleteSection/${sectionId}`, httpOptions);

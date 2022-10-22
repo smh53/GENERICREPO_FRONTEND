@@ -14,14 +14,15 @@
   <div class="header-container">
     <nb-actions size="small">
   
-      <!-- <nb-action class="control-item">
-        <nb-search type="rotate-layout"></nb-search>
-      </nb-action>
-      <nb-action class="control-item" icon="email-outline"></nb-action>
-      <nb-action class="control-item" icon="bell-outline"></nb-action> -->
+     
+       
+        <nb-action icon="power" link="/auth/log-out"></nb-action>
+      
+      
       <nb-action class="user-action">
-        <nb-user [onlyPicture]="userPictureOnly" >
+        <nb-user [onlyPicture]="userPictureOnly" [name]="user">
         </nb-user>
+        
       </nb-action>
     </nb-actions>
   </div>

@@ -9,8 +9,13 @@ export const environment = {
   evnName: 'dev',
   endPoint: 'http://localhost:5001/',
   sectionUrl: `${LOCAL_URL}Section/`,
-  productUrl: `${LOCAL_URL}Product/`
+  productUrl: `${LOCAL_URL}Product/`,
+  authUrl: `${LOCAL_URL}Auth/`,
+  recaptcha: {
+    siteKey: '6LcMVlAgAAAAAGfN_ddve6yDk60Gyo2v5C2c5NRX'
+  }
 };
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

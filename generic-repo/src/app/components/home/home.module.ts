@@ -5,7 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { SectionModule } from '../section/section.module';
 import { MasterModule } from '../master/master.module';
-import {  NbLayoutModule, NbSidebarModule } from '@nebular/theme';
+import {  NbButtonModule, NbLayoutModule, NbSidebarModule } from '@nebular/theme';
 
 
 
@@ -21,9 +21,9 @@ import {  NbLayoutModule, NbSidebarModule } from '@nebular/theme';
     MasterModule,
     NbLayoutModule,
     NbSidebarModule,
- 
+    NbButtonModule,
    
     
-  ]
+  ],
 })
 export class HomeModule { }

@@ -4,6 +4,9 @@ import { SectionService } from 'src/services/section.service';
 import {AG_GRID_LOCALE_TR} from 'src/app/constants/locale.tr';
 import { RendererActionsComponent } from '../renderer-actions/renderer-actions.component';
 import { NotificationService } from 'src/services/notification.service';
+import { SignalrService } from 'src/services/signalr.service';
+import * as signalR from '@microsoft/signalr';
+import { Section } from 'src/models/section';
 
 
 @Component({
@@ -16,15 +19,31 @@ export class ListSectionComponent implements OnInit {
   public gridApi!: GridApi;
   public gridColumnApi!: any;
   public localeText = AG_GRID_LOCALE_TR;
-  
-  
+  public data: Section[] = [];
+
   constructor(
     private _sectionService: SectionService,
     private _notificationService: NotificationService,
+   
+     private _signalRService: SignalrService
     ) { }
   ngOnInit(): void {
+    this._signalRService.startConnection();
     this.getAllSections();
+    
+     
+  
+    
   }
+
+ 
+
+
+
+
+
+
+
 
   // TABLE CONFIGURATION
   
@@ -39,6 +58,13 @@ export class ListSectionComponent implements OnInit {
     // html'de -- [rowClassRules] = "rowClassRules" -- ekle
 //     return params.data.sectionNo > 3; }, 
 // };
+
+
+
+
+
+
+
 onGridReady(params: GridReadyEvent) {
   params.api.sizeColumnsToFit(); // az sütun var, ekrana oturtmak için kullanıldı
   params.api.resetRowHeights();
